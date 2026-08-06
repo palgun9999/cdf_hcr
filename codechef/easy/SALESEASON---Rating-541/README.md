@@ -57,7 +57,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-06T13:03:22.595Z  
+**Submitted:** 2026-08-06T13:04:00.297Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -84,7 +84,7 @@ int main()
         }
         else
         {
-            cout<<x-500;
+            cout<<x-500<<endl;
         }
     }
     return 0;
