@@ -22,7 +22,7 @@ int main()
         }
         else
         {
-            cout<<x-500;
+            cout<<x-500<<endl;
         }
     }
     return 0;
