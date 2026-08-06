@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,x;
+        cin>>n>>x;
+        int nx=n*x;
+        int c=0;
+        while(nx>0)
+        {
+            c++;
+            nx-=4;
+        }
+        cout<<c<<endl;
+    }
+    return 0;
+}
