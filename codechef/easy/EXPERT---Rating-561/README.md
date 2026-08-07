@@ -57,7 +57,7 @@ YES
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-07T03:55:22.467Z  
+**Submitted:** 2026-08-07T03:56:28.284Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -70,7 +70,7 @@ int main()
     {
         int x,y;
         cin>>x>>y;
-        if(y>=x/2)
+        if(y>=x/2.0)
         {
             cout<<"YES"<<endl;
         }
