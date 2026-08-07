@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int a,b,x,y;
+        cin>>a>>b>>x>>y;
+        int un=a*b;
+        int oun=x*y;
+        if(oun>=un)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+    }
+    return 0;
+}
