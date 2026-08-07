@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        int tot_incom=n*50;
+        int bud=(2*(tot_incom*20)/100)+((tot_incom*30)/100);
+        cout<<tot_incom-bud<<endl;
+    }
+    return 0;
+}
