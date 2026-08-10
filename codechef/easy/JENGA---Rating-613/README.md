@@ -4,69 +4,63 @@
 
 ## Problem
 
-### Bus Seat Numbering
+### Jenga Night
 
-There is a bus with 30 seats. The seats are numbered from 1 to 30, and the numbering is as depicted in this image.
+Chef hosts a party for his birthday. There are $N$ people at the party. All these $N$ people decide to play Jenga.
 
-As can be seen in the image, the bus is divided into two decks - The Lower deck, and the Upper deck, with 15 seats each. And some of the seats come as Single and some as Double. For example, Seats 1 and 2 are Double, whereas Seat 11 is a Single.
+There are $X$ Jenga tiles available. In one round, all the players pick $1$ tile each and place it in the tower.
+The game is  *valid*  if:
 
-You will be given a Seat number, and your job is to classify it as one of these 4 types:
+- All the players have a tile in each round;
+- All the tiles are used at the end.
 
-- Lower Single
-- Lower Double
-- Upper Single
-- Upper Double
+Given $N$ and $X$, find whether the game is  *valid*.
+
 ### Input Format
-- The first line of input will contain a single integer $T$, denoting the number of test cases.
-- Each test case consists of a single line of input which contains a single integers $N$ — the seat number.
+- First line will contain $T$, the number of test cases. Then the test cases follow.
+- Each test case contains a single line of input, containing two space-separated integers $N$ and $X$ representing the number of people at the party and the number of available tiles respectively.
 ### Output Format
 
-For each test case, output on a new line, the type of seat.
+For each test case, output in a single line $\texttt{YES}$ if the game is valid, else output $\texttt{NO}$.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings $\texttt{YeS}$, $\texttt{yEs}$, $\texttt{yes}$ and $\texttt{YES}$ will all be treated as identical).
 
 ### Constraints
-- $1 \leq T \leq 100$
-- $1 \leq N \leq 30$
+- $1 \leq T \leq 10^4$
+- $1 \leq N, X \leq 1000$
 ### Sample 1:
 Input
 Output
 
 ```
-5
-6
-28
-16
-13
-10
+3
+3 3
+4 2
+2 4
 
 ```
 
 ```
-Lower Double
-Upper Single
-Upper Double
-Lower Single
-Lower Double
+YES
+NO
+YES
 
 ```
 
 ### Explanation:
 
- **Testcase 1:**  The seat number 6 is in the Lower deck, and it is a Double. Hence the output is "Lower Double".
+ **Test case $1$:**  The game will last for $1$ round after which the tiles will finish.
 
- **Testcase 2:**  The seat number 28 is in the Upper deck, and it is a Single. Hence the output is "Upper Single".
+ **Test case $2$:**  There are not enough Jenga tiles for everyone to place.
 
- **Testcase 3:**  The seat number 16 is in the Upper deck, and it is a Double. Hence the output is "Upper Double".
-
- **Testcase 4:**  The seat number 13 is in the Lower deck, and it is a Single. Hence the output is "Lower Single".
-
- **Testcase 5:**  The seat number 10 is in the Lower deck, and it is a Double. Hence the output is "Lower Double".
+ **Test case $3$:**  The game will last for $2$ rounds as after round $2$ all Jenga tiles are used.
 
 ## Solution
 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-10T13:25:12.172Z  
+**Submitted:** 2026-08-10T13:28:06.401Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -77,23 +71,15 @@ int main()
     cin>>t;
     while(t--)
     {
-        int n;
-        cin>>n;
-        if(n<=10)
+        int n,x;
+        cin>>n>>x;
+        if(x>=n)
         {
-            cout<<"Lower Double"<<endl;
-        }
-        else if(n>10 && n<=15)
-        {
-            cout<<"Lower Single"<<endl;
-        }
-        else if(n>15 && n<=25)
-        {
-            cout<<"Upper Double"<<endl;
+            cout<<"YES"<<endl;
         }
         else
         {
-            cout<<"Upper Single"<<endl;
+            cout<<"NO"<<endl;
         }
     }
     return 0;
