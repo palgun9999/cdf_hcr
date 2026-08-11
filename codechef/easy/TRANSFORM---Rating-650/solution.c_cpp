@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{  
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int x,y,z,res;
+        cin>>x>>y>>z;
+        if(z-y/x>=0)
+        {
+            res=z-y/x;
+        }
+        else
+        {
+            res=0;
+        }
+        cout<<res<<endl;
+    }
+    return 0;
+}
