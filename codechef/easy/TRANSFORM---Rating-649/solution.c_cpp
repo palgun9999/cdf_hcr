@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int x;
+        cin>>x;
+        string s="normal";
+        while(x>0)
+        {
+            if(s=="normal")
+            {
+                s="huge";
+            }
+            else if(s=="huge")
+            {
+                s="small";
+            }
+            else
+            {
+                s="normal";
+            }
+            x--;
+        }
+        cout<<s<<endl;
+    }
+}
