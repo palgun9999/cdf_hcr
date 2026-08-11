@@ -58,7 +58,7 @@ Qualify
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-11T03:43:15.049Z  
+**Submitted:** 2026-08-11T12:07:33.054Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -69,18 +69,20 @@ int main()
     cin>>t;
     while(t--)
     {
-        int x,a,b;
-        cin>>x>>a>>b;
-        if(a+b*2>=x)
+        int n,x,c=0;
+        cin>>n>>x;
+        vector<int> s(n);
+        for(int i=0;i<n;i++)
         {
-            cout<<"Qualify"<<endl;
+            cin>>s[i];
+            if(s[i]>=x)
+            {
+                c++;
+            }
         }
-        else
-        {
-            cout<<"NotQualify"<<endl;
-        }
+        cout<<c<<endl;
+        
     }
-    return 0;
 }
 
 ```
