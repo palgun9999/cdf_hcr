@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,m;
+        cin>>n>>m;
+        int lef=m,rit=n;
+        if(lef<n)
+        {
+            lef=n-lef;
+            cout<<lef+rit<<endl;
+        }
+        else
+        {
+            cout<<rit<<endl;
+        }
+        
+    }
+    return 0;
+}
