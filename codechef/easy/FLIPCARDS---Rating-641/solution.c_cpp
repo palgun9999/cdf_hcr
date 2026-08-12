@@ -8,7 +8,9 @@ int main()
     {
         int n,x;
         cin>>n>>x;
-        if(n==x)
+        int up=x;
+        int dwn=n-x;
+        if(x==n)
         {
             cout<<0<<endl;
         }
