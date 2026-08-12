@@ -76,26 +76,40 @@ Bob can thus eat all the chocolates without ever giving Alice a turn - so Alice 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-12T15:15:30.624Z  
+**Submitted:** 2026-08-12T15:19:20.704Z  
 
 ```c_cpp
 #include<bits/stdc++.h>
 using namespace std;
+
 int main(){
     int t;
     cin>>t;
     while(t--){
         int n;
         cin>>n;
-        int sum=0,x;
+        vector<int>a(n);
+        int sum=0;
+        int alice=0;
         for(int i=0;i<n;i++){
-            cin>>x;
-            sum+=x;
+            cin>>a[i];
+            sum+=a[i];
+            if(a[i]%2==0)
+                alice+=a[i];
         }
-        if(sum%2==0)
-            cout<<sum-1<<endl;
-        else
+        if(sum%2!=0){
             cout<<0<<endl;
+        }
+        else{
+            int odd=0;
+            for(int i=0;i<n;i++){
+                if(a[i]%2!=0)
+                    odd+=a[i];
+            }
+            if(odd>0)
+                alice+=odd-1;
+            cout<<alice<<endl;
+        }
     }
     return 0;
 }
