@@ -73,38 +73,29 @@ It can be verified that using fewer than two operations is not enough to make $N
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-12T14:57:28.214Z  
+**Submitted:** 2026-08-12T14:58:43.592Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main() 
-{
-    int t; 
+
+int main(){
+    int t;
     cin>>t;
-    while(t--)
-    {
-        int n,i=1,c=0;
+    while(t--){
+        int n;
         cin>>n;
-        while(n%3!=0)
-        {
-            int ad1=1;
-            if((ad1+n)%3<5*i%3)
-            {
-                n+=ad1;
-            }
-            else
-            {
-                i++;
-                n=5*i;
-            }
-            c++;
-        }
-        cout<<c<<endl;
+        if(n%3==0)
+            cout<<0<<endl;
+        else if((n+1)%3==0)
+            cout<<1<<endl;
+        else if(((n/5+1)*5)%3==0)
+            cout<<1<<endl;
+        else
+            cout<<2<<endl;
     }
     return 0;
 }
-
 ```
 
 ---
