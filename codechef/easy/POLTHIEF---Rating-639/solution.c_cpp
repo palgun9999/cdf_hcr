@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int x,y,c=0;
+        cin>>x>>y;
+        //while(x!=y)
+        //{
+          //  c+=1;
+            //y++;
+            //x+=2;
+        //}
+        cout<<abs(x-y)<<endl;
+    }
+    return 0;
+}
