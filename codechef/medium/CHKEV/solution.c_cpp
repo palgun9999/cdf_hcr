@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int l,r,fl=0;
+    cin>>l>>r;
+    while(l<=r)
+    {
+        if(l%2==0)
+        {
+            fl=1;
+            break;
+        }
+        l++;
+    }
+    if(fl==1)
+    {
+        cout<<"YES"<<endl;
+    }
+    else
+    {
+        cout<<"NO"<<endl;
+    }
+}
