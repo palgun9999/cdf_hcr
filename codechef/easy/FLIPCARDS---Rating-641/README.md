@@ -61,7 +61,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-11T13:27:06.463Z  
+**Submitted:** 2026-08-12T06:05:47.886Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -74,7 +74,9 @@ int main()
     {
         int n,x;
         cin>>n>>x;
-        if(n==x)
+        int up=x;
+        int dwn=n-x;
+        if(x==n)
         {
             cout<<0<<endl;
         }
