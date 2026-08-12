@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t; 
+    cin>>t;
+    while(t--)
+    {
+        int n,i=1,c=0;
+        cin>>n;
+        while(n%3!=0)
+        {
+            int ad1=1;
+            if((ad1+n)%3<5*i%3)
+            {
+                n+=ad1;
+            }
+            else
+            {
+                i++;
+                n=5*i;
+            }
+            c++;
+        }
+        cout<<c<<endl;
+    }
+    return 0;
+}
