@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,m,x;
+        cin>>n>>m>>x;
+        int row,i=1;
+        int c=0;
+        while(i<n*m)
+        {
+            if(i==x)
+            {
+                row=c;
+            }
+            
+            i++;
+        }
+    }
+    return 0;
+}
