@@ -76,40 +76,32 @@ Bob can thus eat all the chocolates without ever giving Alice a turn - so Alice 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-12T15:20:20.341Z  
+**Submitted:** 2026-08-12T15:23:03.165Z  
 
 ```c_cpp
 #include<bits/stdc++.h>
 using namespace std;
-
 int main(){
     int t;
     cin>>t;
     while(t--){
         int n;
         cin>>n;
-        vector<int>a(n);
-        int sum=0;
-        int alice=0;
+        vector<int> a(n);
+        long long sum=0;
+        int k=0; // count of odd-valued boxes
         for(int i=0;i<n;i++){
             cin>>a[i];
             sum+=a[i];
-            if(a[i]%2==0)
-                alice+=a[i];
+            if(a[i]%2!=0) k++;
         }
-        if(sum%2!=0){
-            cout<<0<<endl;
+        long long alice;
+        if(sum%2==0){
+            alice = sum - k/2;
+        } else {
+            alice = k/2;
         }
-        else{
-            int odd=0;
-            for(int i=0;i<n;i++){
-                if(a[i]%2!=0)
-                    odd+=a[i];
-            }
-            if(odd>0)
-                alice+=odd-1;
-            cout<<alice<<endl;
-        }
+        cout<<alice<<endl;
     }
     return 0;
 }
