@@ -6,26 +6,14 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,b,flag=0,res;
-        cin>>a>>b;
-        for(int i=1;i<=10;i++)
+        int n,m,c=0,k;
+        cin>>n>>m>>k;
+        while(n>0)
         {
-            if(a+b+i==21)
-            {
-                flag=1;
-                res=i;
-                break;
-            }
+            c++;
+            n-=k*m;
         }
-        if(flag==1)
-        {
-            cout<<res<<endl;
-        }
-        else
-        {
-            cout<<-1<<endl;
-        }
-        
+        cout<<c<<endl;
     }
     return 0;
 }
