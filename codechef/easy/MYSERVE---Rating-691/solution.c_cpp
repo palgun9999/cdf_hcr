@@ -6,9 +6,16 @@ int main()
     cin>>t;
     while(t--)
     {
-        int x,y;
-        cin>>x>>y;
-        cout<<x/y<<endl;
+        int p,q;
+        cin>>p>>q;
+        if((p+q)%4<2)
+        {
+            cout<<"Alice"<<endl;
+        }
+        else
+        {
+            cout<<"Bob"<<endl;
+        }
     }
     return 0;
 }
