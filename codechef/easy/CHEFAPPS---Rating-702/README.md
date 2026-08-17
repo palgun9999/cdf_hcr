@@ -59,7 +59,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T12:39:04.907Z  
+**Submitted:** 2026-08-17T12:40:25.202Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -72,7 +72,7 @@ int main()
     {
         int s,x,y,z;
         cin>>s>>x>>y>>z;
-        if(s>x+y+z)
+        if(s>x+y+z || s<z)
         {
             cout<<0<<endl;
         }
