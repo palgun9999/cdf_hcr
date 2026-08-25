@@ -6,18 +6,16 @@ int main()
     cin>>t;
     while(t--)
     {
-        int n,c=0;
-        cin>>n;
-        vector<int> sadviee(n);
-        for(int i=0;i<n;i++)
+        int x,y,d;
+        cin>>x>>y>>d;
+        if(abs(x-y)<=d)
         {
-            cin>>sadviee[i];
-            if(sadviee[i]>=10 && sadviee[i]<=60)
-            {
-                c++;
-            }
+            cout<<"YES"<<endl;
         }
-        cout<<c<<endl;
+        else
+        {
+            cout<<"NO"<<endl;
+        }
     }
     return 0;
 }
