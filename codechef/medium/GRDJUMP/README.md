@@ -65,7 +65,7 @@ For the given costs, this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T15:16:38.297Z  
+**Submitted:** 2026-08-26T15:24:53.327Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -78,8 +78,37 @@ int main()
     {
         int a,b,p,q,r;
         cin>>a>>b>>p>>q>>r;
-        
+        vector<vector<int>> sa(a+1,vector<int>(b+1,1e9));
+        sa[0][0]=0;
+        for(int x=0;x<=a;x++)
+        {
+            for(int y=0;y<=b;y++)
+            {
+                if(x+1<=a)
+                {
+                    sa[x+1][y]=min(sa[x+1][y],sa[x][y]+p);
+                }
+                if(x+2<=a)
+                {
+                    sa[x+2][y]=min(sa[x+2][y],sa[x][y]+p);
+                }
+                if(y+1<=b)
+                {
+                    sa[x][y+1]=min(sa[x][y+1],sa[x][y]+q);
+                }
+                if(y+2<=b)
+                {
+                    sa[x][y+2]=min(sa[x][y+2],sa[x][y]+q);
+                }
+                if(x+1<=a && y+1<=b)
+                {
+                    sa[x+1][y+1]=min(sa[x+1][y+1],sa[x][y]+r);
+                }
+            }
+        }
+        cout<<sa[a][b]<<endl;
     }
+    return 0;
 }
 
 ```
