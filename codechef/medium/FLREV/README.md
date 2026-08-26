@@ -73,15 +73,19 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T15:25:29.370Z  
+**Submitted:** 2026-08-26T15:27:01.350Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	// your code goes here
-
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        
+    }
 }
 
 ```
