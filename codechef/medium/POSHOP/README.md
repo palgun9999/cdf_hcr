@@ -65,7 +65,7 @@ However, it's still optimal to buy only the first item rather than buy any two o
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T15:09:31.805Z  
+**Submitted:** 2026-08-26T15:11:05.124Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -82,7 +82,11 @@ int main()
         {
             cin>>sa[i];
         }
-        int ans= 0
+        int ans= 0;
+        for(int i=0;i<n;i++)
+        {
+            ans=max(ans,sa[i]);
+        }
         for(int i=0;i<n;i++)
         {
             for(int j=i+1;j<n;j++)
