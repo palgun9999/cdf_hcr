@@ -73,7 +73,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T15:27:01.350Z  
+**Submitted:** 2026-08-26T15:27:43.404Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -84,7 +84,34 @@ int main()
     cin>>t;
     while(t--)
     {
-        
+        int N;
+        string S;
+
+        cin >> N;
+        cin >> S;
+
+        int transitions = 0;
+
+        for (int i = 0; i < N - 1; i++)
+        {
+            if (S[i] != S[i + 1])
+            {
+                transitions++;
+            }
+        }
+
+        int beauty = (N - 1) - transitions;
+
+        if (transitions >= 3)
+        {
+            beauty += 2;
+        }
+        else if (transitions == 2)
+        {
+            beauty += 1;
+        }
+
+        cout << beauty << endl;
     }
 }
 
