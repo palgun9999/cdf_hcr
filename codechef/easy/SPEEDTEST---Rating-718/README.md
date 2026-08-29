@@ -55,7 +55,7 @@ Alice
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-29T06:27:08.211Z  
+**Submitted:** 2026-08-29T06:26:46.158Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,7 +66,7 @@ int main()
     cin>>t;
     while(t--)
     {
-        float a,x,b,y;
+        int a,x,b,y;
         cin>>a>>x>>b>>y;
         if(a/x>b/y)
         {
