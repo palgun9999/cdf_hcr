@@ -6,7 +6,7 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,x,b,y;
+        float a,x,b,y;
         cin>>a>>x>>b>>y;
         if(a/x>b/y)
         {
