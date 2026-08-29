@@ -55,7 +55,7 @@ Alice
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-29T06:13:35.715Z  
+**Submitted:** 2026-08-29T06:26:12.934Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -72,13 +72,13 @@ int main()
         {
             cout<<"Alice"<<endl;
         }
-        else if(a/x<b/y)
+        else if(a/x==b/y)
         {
-            cout<<"Bob"<<endl;
+            cout<<"Equal"<<endl;
         }
         else
         {
-            cout<<"Equal"<<endl;
+            cout<<"Bob"<<endl;
         }
     }
     return 0;
