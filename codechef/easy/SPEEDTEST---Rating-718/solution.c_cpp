@@ -12,13 +12,13 @@ int main()
         {
             cout<<"Alice"<<endl;
         }
-        else if(a/x<b/y)
+        else if(a/x==b/y)
         {
-            cout<<"Bob"<<endl;
+            cout<<"Equal"<<endl;
         }
         else
         {
-            cout<<"Equal"<<endl;
+            cout<<"Bob"<<endl;
         }
     }
     return 0;
