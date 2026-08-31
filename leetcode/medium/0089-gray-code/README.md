@@ -53,8 +53,8 @@ Output: [0,1]
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 14 MB (beats 88.94%)  
-**Submitted:** 2026-08-31T12:35:58.946Z  
+**Memory:** 13.8 MB (beats 98.71%)  
+**Submitted:** 2026-08-31T12:36:52.762Z  
 
 ```cpp
 #include<vector>
