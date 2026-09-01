@@ -36,23 +36,35 @@ Output: 99
 
 ## Solution
 
-**Language:** Python  
-**Runtime:** 2 ms (beats 77.18%)  
-**Memory:** 20.9 MB (beats 17.12%)  
-**Submitted:** 2026-08-31T09:48:53.196Z  
+**Language:** C++  
+**Runtime:** 2 ms (beats 39.26%)  
+**Memory:** 13.4 MB (beats 66.17%)  
+**Submitted:** 2026-09-01T12:57:56.259Z  
 
-```py
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        freq={}
-        for i in nums:
-            if i in freq:
-                freq[i]+=1
-            else:
-                freq[i]=1
-        for i in freq:
-            if freq[i]==1:
-                return i
+```cpp
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) 
+    {
+        int ans = 0;
+        for(int bit = 0; bit < 32; bit++)
+        {
+            int count = 0;
+            for(int x : nums)
+            {
+                if(x & (1 << bit))
+                {
+                    count++;
+                }
+            }
+            if(count % 3 != 0)
+            {
+                ans |= (1 << bit);
+            }
+        }
+        return ans;
+    }
+};
 ```
 
 ---
