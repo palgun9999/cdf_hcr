@@ -25,7 +25,7 @@ where **LAT\_N** is the northern latitude and **LONG\_W** is the western longitu
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-01T08:57:43.623Z  
+**Submitted:** 2026-09-01T08:57:44.814Z  
 
 ```cpp
 /*
