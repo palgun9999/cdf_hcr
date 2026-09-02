@@ -56,29 +56,28 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T15:25:16.625Z  
+**Submitted:** 2026-09-02T15:28:05.797Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
     int t;
-    cin>>t;
+    cin >> t;
 
     while(t--)
     {
         long long n;
         cin >> n;
-        if(n % 3 == 1)
-        {
-            cout << n << endl;
-        }
+
+        if(n == 1)
+            cout << 1 << endl;
         else
-        {
-            cout << 3 * ((n + 1) / 3) + 1<<endl;
-        }
+            cout << 3 * ((n + 1) / 3) + 1 << endl;
     }
+
     return 0;
 }
 ```
