@@ -66,17 +66,36 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T15:36:55.317Z  
+**Submitted:** 2026-09-02T15:39:29.212Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	// your code goes here
-
+int main()
+{
+    int T;
+    cin >> T;
+    while(T--)
+    {
+        int N;
+        cin >> N;
+        long long prev = 0;
+        long long ans = 0;
+        for(int i = 0; i < N; i++)
+        {
+            long long x;
+            cin >> x;
+            if(i % 2 == 1)
+                x = -x;
+            ans += abs(x - prev);
+            prev = x;
+            if(i == N - 1)
+                ans += abs(x);
+        }
+        cout << ans / 2 << endl;
+    }
+    return 0;
 }
-
 ```
 
 ---
