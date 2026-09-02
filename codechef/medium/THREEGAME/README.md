@@ -56,46 +56,31 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T15:21:01.302Z  
+**Submitted:** 2026-09-02T15:25:16.625Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-int main() 
+int main()
 {
     int t;
     cin>>t;
+
     while(t--)
     {
-        int n;
-        cin>>n;
-        int r=0;
-        int f=0,s=0,t=0;
-        while(n>0)
+        long long n;
+        cin >> n;
+        if(n % 3 == 1)
         {
-            if(f==s && f==t)
-            {
-                f++;
-            }
-            else if(s==t)
-            {
-                s++;
-            }
-            else
-            {
-                t++;
-            }
-            r++;
-            n--;
+            cout << n << endl;
         }
-        if(f==s && f==t)
+        else
         {
-            r++;
+            cout << 3 * ((n + 1) / 3) + 1<<endl;
         }
-        cout<<r<<endl;
     }
+    return 0;
 }
-
 ```
 
 ---
