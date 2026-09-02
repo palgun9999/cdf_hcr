@@ -23,7 +23,6 @@ For each test case, output on a new line the maximum possible sum remaining afte
 - $1 \le A_i \le 100$
 ### Sample 1:
 Input
-Copy to clipboard
 Output
 
 ```
@@ -52,7 +51,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T15:03:48.293Z  
+**Submitted:** 2026-09-02T15:03:52.290Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
