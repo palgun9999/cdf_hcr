@@ -23,6 +23,7 @@ For each test case, output on a new line the maximum possible sum remaining afte
 - $1 \le A_i \le 100$
 ### Sample 1:
 Input
+Copy to clipboard
 Output
 
 ```
@@ -51,7 +52,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T14:54:53.279Z  
+**Submitted:** 2026-09-02T15:03:48.293Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -64,30 +65,25 @@ int main()
     {
         int n,k;
         cin>>n>>k;
+        int sum=0;
         vector<int> br(n);
         for(int i=0;i<n;i++)
         {
             cin>>br[i];
         }
-        while(k>0)
-        {
-            if(br[0]<br[n-1])
-            {
-                br.erase(br.begin());
-                k--;
-            }
-            else
-            {
-                br.erase(br.end());
-                k--;
-            }
-        }
-        int sum=0;
-        for(int i=0;i<br.size();i++)
+        int len=n-k;
+        for(int i=0;i<n;i++)
         {
             sum+=br[i];
         }
-        cout<<sum<<endl;
+        int res=sum;
+        for(int i=len;i<n;i++)
+        {
+            sum+=br[i];
+            sum-=br[i-len];
+            res=max(res,sum);
+        }
+        cout<<res<<endl;
     }
     return 0;
 }
