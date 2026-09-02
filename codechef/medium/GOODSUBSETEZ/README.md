@@ -54,17 +54,36 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T15:06:47.296Z  
+**Submitted:** 2026-09-02T15:07:43.212Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	// your code goes here
-
+int main()
+{
+    int T;
+    cin >> T;
+    while(T--)
+    {
+        int n;
+        cin >> n;
+        vector<int> cnt(31, 0);
+        for(int i = 0; i < n; i++)
+        {
+            int x;
+            cin >> x;
+            int bit = 31 - __builtin_clz(x);
+            cnt[bit]++;
+        }
+        int ans = 0;
+        for(int i = 0; i < 31; i++)
+        {
+            ans = max(ans, cnt[i]);
+        }
+        cout << ans << endl;
+    }
+    return 0;
 }
-
 ```
 
 ---
