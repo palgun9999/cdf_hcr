@@ -51,42 +51,41 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T15:03:52.290Z  
+**Submitted:** 2026-09-02T15:04:38.187Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-int main() 
+int main()
 {
     int t;
-    cin>>t;
+    cin >> t;
     while(t--)
     {
-        int n,k;
-        cin>>n>>k;
-        int sum=0;
+        int n, k;
+        cin >> n >> k;
         vector<int> br(n);
-        for(int i=0;i<n;i++)
+        for(int i = 0; i < n; i++)
         {
-            cin>>br[i];
+            cin >> br[i];
         }
-        int len=n-k;
-        for(int i=0;i<n;i++)
+        int len = n - k;
+        int sum = 0;
+        for(int i = 0; i < len; i++)
         {
-            sum+=br[i];
+            sum += br[i];
         }
-        int res=sum;
-        for(int i=len;i<n;i++)
+        int ans = sum;
+        for(int i = len; i < n; i++)
         {
-            sum+=br[i];
-            sum-=br[i-len];
-            res=max(res,sum);
+            sum += br[i];
+            sum -= br[i - len];
+            ans = max(ans, sum);
         }
-        cout<<res<<endl;
+        cout << ans << endl;
     }
     return 0;
 }
-
 ```
 
 ---
