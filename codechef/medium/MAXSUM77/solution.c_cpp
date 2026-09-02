@@ -1,32 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
+int main() 
 {
     int t;
-    cin >> t;
+    cin>>t;
     while(t--)
     {
-        int n, k;
-        cin >> n >> k;
+        int n,k;
+        cin>>n>>k;
+        int sum=0;
         vector<int> br(n);
-        for(int i = 0; i < n; i++)
+        for(int i=0;i<n;i++)
         {
-            cin >> br[i];
+            cin>>br[i];
         }
-        int len = n - k;
-        int sum = 0;
-        for(int i = 0; i < len; i++)
+        int len=n-k;
+        for(int i=0;i<n;i++)
         {
-            sum += br[i];
+            sum+=br[i];
         }
-        int ans = sum;
-        for(int i = len; i < n; i++)
+        int res=sum;
+        for(int i=len;i<n;i++)
         {
-            sum += br[i];
-            sum -= br[i - len];
-            ans = max(ans, sum);
+            sum+=br[i];
+            sum-=br[i-len];
+            res=max(res,sum);
         }
-        cout << ans << endl;
+        cout<<res<<endl;
     }
     return 0;
 }
