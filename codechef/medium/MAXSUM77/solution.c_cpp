@@ -8,30 +8,25 @@ int main()
     {
         int n,k;
         cin>>n>>k;
+        int sum=0;
         vector<int> br(n);
         for(int i=0;i<n;i++)
         {
             cin>>br[i];
         }
-        while(k>0)
-        {
-            if(br[0]<br[n-1])
-            {
-                br.erase(br.begin());
-                k--;
-            }
-            else
-            {
-                br.erase(br.end());
-                k--;
-            }
-        }
-        int sum=0;
-        for(int i=0;i<br.size();i++)
+        int len=n-k;
+        for(int i=0;i<n;i++)
         {
             sum+=br[i];
         }
-        cout<<sum<<endl;
+        int res=sum;
+        for(int i=len;i<n;i++)
+        {
+            sum+=br[i];
+            sum-=br[i-len];
+            res=max(res,sum);
+        }
+        cout<<res<<endl;
     }
     return 0;
 }
