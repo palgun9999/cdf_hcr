@@ -46,12 +46,12 @@ Explanation: The numbers 1, 3, 9, 10, and 17 are all present on at least one of 
 ## Solution
 
 **Language:** C++  
-**Runtime:** 19 ms (beats 5.83%)  
-**Memory:** 40.1 MB (beats 6.62%)  
-**Submitted:** 2026-09-08T15:42:59.787Z  
+**Runtime:** 20 ms (beats 5.67%)  
+**Memory:** 40.2 MB (beats 5.44%)  
+**Submitted:** 2026-09-08T15:43:20.990Z  
 
 ```cpp
-const int N = 4000001; // must cover up to 4*10^6 inclusive
+const int N = 4000001;
 vector<bool> sa(N, true);
 bool sieveBuilt = false;
 
