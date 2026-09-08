@@ -1,4 +1,4 @@
-const int N = 4000001; // must cover up to 4*10^6 inclusive
+const int N = 4000001;
 vector<bool> sa(N, true);
 bool sieveBuilt = false;
 
