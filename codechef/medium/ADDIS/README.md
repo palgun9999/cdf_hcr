@@ -77,7 +77,7 @@ It can be shown that this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T15:24:40.298Z  
+**Submitted:** 2026-09-09T15:22:58.828Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -93,26 +93,35 @@ int main()
         int n;
         cin >> n;
 
-        map<int, int> mp;
+        vector<int> sa(n);
+        vector<int> dw;
 
         for(int i = 0; i < n; i++)
         {
-            int x;
-            cin >> x;
-            mp[x]++;
+            cin >> sa[i];
+
+            if(i % 2 == 0)
+                dw.push_back(sa[i]);
+            else
+                dw.push_back(-sa[i]);
         }
 
-        int mx = 0;
+        map<int, int> ik;
 
-        for(auto x : mp)
+        for(int i = 0; i < n; i++)
         {
-            mx = max(mx, x.second);
+            ik[dw[i]]++;
         }
 
-        cout << (mx + 1) / 2 << endl;
-    }
+        int a = 0;
 
-    return 0;
+        for(auto x : ik)
+        {
+            a = max(a, x.second);
+        }
+
+        cout << a << endl;
+    }
 }
 ```
 
