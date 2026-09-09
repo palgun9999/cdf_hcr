@@ -6,34 +6,24 @@ int main() {
     cin >> t;
 
     while (t--) {
-        int x, y;
+        long long x, y;
         cin >> x >> y;
 
-        vector<long long> dp(205, -1);
-        dp[0] = 0;
+        long long ans = LLONG_MAX;
 
-        for (int day = 1;; day++) {
-            vector<long long> ndp(205, -1);
+        for (long long k = 1; k <= 100; k++) {
+            long long profit = y * k * (k + 1) * (2 * k + 1) / 6 - x * k;
+            long long days = k;
 
-            for (int k = 0; k <= day; k++) {
-                if (dp[k] >= 0)
-                    ndp[k] = max(ndp[k], dp[k] + 1LL * y * k * k);
-
-                if (k > 0 && dp[k - 1] >= 0)
-                    ndp[k] = max(ndp[k], dp[k - 1] - x + 1LL * y * k * k);
+            if (profit <= 0) {
+                long long gain = y * k * k;
+                days += (-profit) / gain + 1;
             }
 
-            dp = ndp;
-
-            long long best = 0;
-            for (long long p : dp)
-                best = max(best, p);
-
-            if (best > 0) {
-                cout << day << '\n';
-                break;
-            }
+            ans = min(ans, days);
         }
+
+        cout << ans << endl;
     }
 
     return 0;
