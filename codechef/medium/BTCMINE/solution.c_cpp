@@ -1,7 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
 
-int main() {
-	// your code goes here
-
+    while(t--)
+    {
+        long long X, Y, profit = 0, gpu = 0;
+        int days = 0;
+        while (profit <= 0) 
+        {
+            days++;
+            gpu++;
+            profit += Y * gpu * gpu - X;
+        }
+        cout << days << endl;
+    }
+    return 0;
 }
