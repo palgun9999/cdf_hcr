@@ -1,45 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() 
 {
     int t;
-    cin>>t;
+    cin >> t;
+
     while(t--)
     {
         int n;
-        cin>>n;
-        vector<int> sa(n);
-        vector<int> dw;
-        for(int i=0;i<n;i++)
+        cin >> n;
+
+        map<int, int> mp;
+
+        for(int i = 0; i < n; i++)
         {
-            cin>>sa[i];
-            if(i%2==0)
-            {
-                dw.push_back(t+sa[i]);
-            }
-            else
-            {
-                dw.push_back(t-sa[i]);
-            }
+            int x;
+            cin >> x;
+            mp[x]++;
         }
-        map<int,int> ik;
-        for(int i=0;i<n;i++)
+
+        int mx = 0;
+
+        for(auto x : mp)
         {
-            if(ik.find(dw[i])!=ik.end())
-            {
-                ik[dw[i]]++;
-            }
-            else
-            {
-                ik[dw[i]]=1;
-            }
+            mx = max(mx, x.second);
         }
-        int a=0;
-        for(auto x:dw)
-        {
-            a=max(a,x.second);
-        }
-        cout<<a<<endl;
-        
+
+        cout << (mx + 1) / 2 << endl;
     }
+
+    return 0;
 }
