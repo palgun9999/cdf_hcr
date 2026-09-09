@@ -2,28 +2,22 @@
 using namespace std;
 
 int main() {
-    int t;
-    cin >> t;
+    int T;
+    cin >> T;
 
-    while (t--) {
-        long long x, y;
-        cin >> x >> y;
+    while (T--) {
+        long long X, Y;
+        cin >> X >> Y;
 
-        long long ans = LLONG_MAX;
+        for (long long d = 1; ; d++) {
+            long long mining = Y * d * (d + 1) * (2 * d + 1) / 6;
+            long long cost = X * d;
 
-        for (long long k = 1; k <= 100; k++) {
-            long long profit = y * k * (k + 1) * (2 * k + 1) / 6 - x * k;
-            long long days = k;
-
-            if (profit <= 0) {
-                long long gain = y * k * k;
-                days += (-profit) / gain + 1;
+            if (mining > cost) {
+                cout << d << '\n';
+                break;
             }
-
-            ans = min(ans, days);
         }
-
-        cout << ans << endl;
     }
 
     return 0;
