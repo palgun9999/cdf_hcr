@@ -65,28 +65,31 @@ It can be verified that there's no way to make a positive profit by the end of t
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T15:28:16.480Z  
+**Submitted:** 2026-09-09T15:29:02.496Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-int main() 
-{
-    int t;
-    cin>>t;
 
-    while(t--)
-    {
-        long long X, Y, profit = 0, gpu = 0;
-        int days = 0;
-        while (profit <= 0) 
-        {
-            days++;
-            gpu++;
-            profit += Y * gpu * gpu - X;
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        long long X, Y;
+        cin >> X >> Y;
+
+        for (long long d = 1; ; d++) {
+            long long mining = Y * d * (d + 1) * (2 * d + 1) / 6;
+            long long cost = X * d;
+
+            if (mining > cost) {
+                cout << d << '\n';
+                break;
+            }
         }
-        cout << days << endl;
     }
+
     return 0;
 }
 ```
