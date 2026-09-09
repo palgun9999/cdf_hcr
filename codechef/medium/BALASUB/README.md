@@ -75,17 +75,58 @@ So, we output $-1$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T15:48:15.103Z  
+**Submitted:** 2026-09-09T15:52:32.409Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
+    int t;
+    cin >> t;
 
+    while (t--) {
+        int n;
+        cin >> n;
+
+        vector<int> a(n);
+        int mx = 0;
+
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+            mx = max(mx, a[i]);
+        }
+
+        int l = -1, r = -1;
+
+        for (int i = 0; i < n; i++) {
+            if (a[i] == mx) {
+                if (l == -1) l = i;
+                r = i;
+            }
+        }
+
+        if (l != r) {
+            cout << l + 1 << " " << r + 1 << endl;
+            continue;
+        }
+
+        bool found = false;
+
+        for (int i = 1; i < n - 1; i++) {
+            if (a[i] > a[i - 1] && a[i] > a[i + 1]) {
+                cout << i << " " << i + 2 << endl;
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+            cout << -1 <<endl;
+    }
+
+    return 0;
 }
-
 ```
 
 ---
