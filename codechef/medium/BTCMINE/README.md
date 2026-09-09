@@ -65,26 +65,42 @@ It can be verified that there's no way to make a positive profit by the end of t
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T15:29:02.496Z  
+**Submitted:** 2026-09-09T15:31:40.497Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int T;
-    cin >> T;
+    int t;
+    cin >> t;
 
-    while (T--) {
-        long long X, Y;
-        cin >> X >> Y;
+    while (t--) {
+        int x, y;
+        cin >> x >> y;
 
-        for (long long d = 1; ; d++) {
-            long long mining = Y * d * (d + 1) * (2 * d + 1) / 6;
-            long long cost = X * d;
+        vector<long long> dp(205, -1);
+        dp[0] = 0;
 
-            if (mining > cost) {
-                cout << d << '\n';
+        for (int day = 1;; day++) {
+            vector<long long> ndp(205, -1);
+
+            for (int k = 0; k <= day; k++) {
+                if (dp[k] >= 0)
+                    ndp[k] = max(ndp[k], dp[k] + 1LL * y * k * k);
+
+                if (k > 0 && dp[k - 1] >= 0)
+                    ndp[k] = max(ndp[k], dp[k - 1] - x + 1LL * y * k * k);
+            }
+
+            dp = ndp;
+
+            long long best = 0;
+            for (long long p : dp)
+                best = max(best, p);
+
+            if (best > 0) {
+                cout << day << '\n';
                 break;
             }
         }
