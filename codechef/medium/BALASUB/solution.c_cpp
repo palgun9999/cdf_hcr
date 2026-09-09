@@ -4,46 +4,44 @@ using namespace std;
 int main() {
     int t;
     cin >> t;
-
     while (t--) {
         int n;
         cin >> n;
-
         vector<int> a(n);
-        int mx = 0;
-
         for (int i = 0; i < n; i++) {
             cin >> a[i];
-            mx = max(mx, a[i]);
         }
-
-        int l = -1, r = -1;
-
-        for (int i = 0; i < n; i++) {
-            if (a[i] == mx) {
-                if (l == -1) l = i;
-                r = i;
+        
+        for (int l = 0; l < n; l++) {
+            for (int r = l + 1; r < n; r++) {
+                int prefmax = a[l];
+                int prefcnt = 1;
+                for (int i = l + 1; i <= r; i++) {
+                    if (a[i] >= prefmax) {
+                        prefmax = a[i];
+                        prefcnt++;
+                    }
+                }
+                
+                int suffmax = a[r];
+                int suffcnt = 1;
+                for (int i = r - 1; i >= l; i--) {
+                    if (a[i] >= suffmax) {
+                        suffmax = a[i];
+                        suffcnt++;
+                    }
+                }
+                
+                if (prefcnt == suffcnt) {
+                    cout << l + 1 << " " << r + 1 << endl;
+                    goto next;
+                }
             }
         }
-
-        if (l != r) {
-            cout << l + 1 << " " << r + 1 << endl;
-            continue;
-        }
-
-        bool found = false;
-
-        for (int i = 1; i < n - 1; i++) {
-            if (a[i] > a[i - 1] && a[i] > a[i + 1]) {
-                cout << i << " " << i + 2 << endl;
-                found = true;
-                break;
-            }
-        }
-
-        if (!found)
-            cout << -1 <<endl;
+        
+        cout << -1 << endl;
+        
+        next:;
     }
-
     return 0;
 }
