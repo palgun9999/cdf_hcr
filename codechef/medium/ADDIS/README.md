@@ -77,7 +77,7 @@ It can be shown that this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T15:05:09.944Z  
+**Submitted:** 2026-09-09T15:22:51.942Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -91,11 +91,37 @@ int main()
         int n;
         cin>>n;
         vector<int> sa(n);
+        vector<int> dw;
         for(int i=0;i<n;i++)
         {
             cin>>sa[i];
+            if(i%2==0)
+            {
+                dw.push_back(t+sa[i]);
+            }
+            else
+            {
+                dw.push_back(t-sa[i]);
+            }
         }
-        vector<int> dw;
+        map<int,int> ik;
+        for(int i=0;i<n;i++)
+        {
+            if(ik.find(dw[i])!=ik.end())
+            {
+                ik[dw[i]]++;
+            }
+            else
+            {
+                ik[dw[i]]=1;
+            }
+        }
+        int a=0;
+        for(auto x:dw)
+        {
+            a=max(a,x.second);
+        }
+        cout<<a<<endl;
         
     }
 }
