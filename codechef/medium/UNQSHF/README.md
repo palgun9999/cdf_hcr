@@ -74,46 +74,46 @@ So, no solution exists.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T14:57:20.674Z  
+**Submitted:** 2026-09-09T15:00:41.340Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-int main() 
-{
-    int t;
-    cin>>t;
-    while(t--)
-    {
-        int n,Aa=0,Bb=0,Ab=0,Ba=0;
-        cin>>n;
-        string a,b;
-        cin>>a;
-        cin>>b;
-        for(int i=0;i<n;i++)
-        {
-            if(a[i]=='a')
-            {
-                Aa++;
-            }
-            else
-            {
-                Bb++;
-            }
-            if(b[i]=='a')
-            {
-                Ba++;
-            }
-            else
-            {
-                Bb++;
-            }
-        }
-        int res;
-        if(((Aa==Ba || Aa==Bb)&&(Ab==Ba || Ab==Bb)) )
-    }
-}
 
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n;
+        cin >> n;
+
+        string a, b;
+        cin >> a >> b;
+
+        int Aa = 0, Ab = 0;
+        int Ba = 0, Bb = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (a[i] == 'a')
+                Aa++;
+            else
+                Ab++;
+
+            if (b[i] == 'a')
+                Ba++;
+            else
+                Bb++;
+        }
+
+        if (Aa == Bb && Ab == Ba)
+            cout << "YES\n";
+        else
+            cout << "NO\n";
+    }
+
+    return 0;
+}
 ```
 
 ---
