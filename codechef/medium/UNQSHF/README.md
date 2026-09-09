@@ -74,7 +74,7 @@ So, no solution exists.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T14:47:16.678Z  
+**Submitted:** 2026-09-09T14:57:15.678Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -85,12 +85,32 @@ int main()
     cin>>t;
     while(t--)
     {
-        int n;
+        int n,Aa=0,Bb=0,Ab=0,Ba=0;
         cin>>n;
         string a,b;
         cin>>a;
         cin>>b;
-        
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]=='a')
+            {
+                Aa++;
+            }
+            else
+            {
+                Bb++;
+            }
+            if(b[i]=='a')
+            {
+                Ba++;
+            }
+            else
+            {
+                Bb++;
+            }
+        }
+        int res;
+        if(((Aa==Ba || Aa==Bb)&&(Ab==Ba || Ab==Bb)) )
     }
 }
 
