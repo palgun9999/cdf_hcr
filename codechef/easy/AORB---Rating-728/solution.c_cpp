@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int x,y;
+        cin>>x>>y;
+        int Aa,Ab;
+        Aa=500-(2*x);
+        Ab=1000-(4*(y+x));
+        int Ba,Bb;
+        Ba=500-(2*(x+y));
+        Bb=1000-(4*(y));
+        cout<<max((Aa+Ab),(Ba+Bb))<<endl;
+    }
+    return 0;
+}
