@@ -1,4 +1,4 @@
-# Text Wrap
+# Designer Door Mat
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -57,14 +57,19 @@ Output the design pattern.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T11:13:18.779Z  
+**Submitted:** 2026-09-14T11:13:50.046Z  
 
 ```py
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n, m = map(int, input().split())
 
+for i in range(1, n, 2):
+    print(('.|.' * i).center(m, '-'))
 
-def wrap(string, max_width):
-    return textwrap.fill(string, max_width)
+print('WELCOME'.center(m, '-'))
 
+for i in range(n - 2, 0, -2):
+    print(('.|.' * i).center(m, '-'))
 
 ```
 
