@@ -1,4 +1,4 @@
-# sWAP cASE
+# String Split and Join
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -63,12 +63,17 @@ The one line contains a string consisting of space separated words.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T11:07:15.526Z  
+**Submitted:** 2026-09-14T11:08:07.419Z  
 
 ```py
-def swap_case(s):
-    return s.swapcase()
 
+
+def split_and_join(line):
+    return "-".join(line.split(" "))
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
 
 ```
 
