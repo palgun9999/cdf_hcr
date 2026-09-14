@@ -1,4 +1,4 @@
-# Alphabet Rangoli
+# Capitalize!
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -30,21 +30,15 @@ Print the capitalized string, $S$.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T11:15:45.549Z  
+**Submitted:** 2026-09-14T11:17:26.208Z  
 
 ```py
-import string
 
-def print_rangoli(size):
-    alphabet = string.ascii_lowercase
-    lines = []
-    
-    for i in range(size):
-        s = "-".join(alphabet[i:size])
-        line = (s[::-1] + s[1:]).center(4 * size - 3, "-")
-        lines.append(line)
-        
-    print("\n".join(lines[::-1] + lines[1:]))
+def solve(s):
+    for x in s.split():
+        s = s.replace(x, x.capitalize())
+    return s
+
 
 ```
 
