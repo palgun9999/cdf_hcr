@@ -1,5 +1,12 @@
-def print_formatted(number):
-    # your code goes here
-    width = len(bin(number)[2:])
-    for i in range(1, number + 1):
-        print(f"{str(i):>{width}} {oct(i)[2:]:>{width}} {hex(i)[2:].upper():>{width}} {bin(i)[2:]:>{width}}")
+import string
+
+def print_rangoli(size):
+    alphabet = string.ascii_lowercase
+    lines = []
+    
+    for i in range(size):
+        s = "-".join(alphabet[i:size])
+        line = (s[::-1] + s[1:]).center(4 * size - 3, "-")
+        lines.append(line)
+        
+    print("\n".join(lines[::-1] + lines[1:]))
