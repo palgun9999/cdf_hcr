@@ -1,8 +1,12 @@
+#
+# Complete the 'print_full_name' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts following parameters:
+#  1. STRING first
+#  2. STRING last
+#
 
-
-def split_and_join(line):
-    return "-".join(line.split(" "))
-if __name__ == '__main__':
-    line = input()
-    result = split_and_join(line)
-    print(result)
+def print_full_name(first, last):
+    # Write your code here
+    print(f"Hello {first} {last}! You just delved into python.")
