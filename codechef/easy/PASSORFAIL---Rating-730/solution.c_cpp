@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,x,p;
+        cin>>n>>x>>p;
+        int res;
+        res=x*3-(n-x);
+        if(res<p)
+        {
+            cout<<"Fail"<<endl;
+        }
+        else
+        {
+            cout<<"Pass"<<endl;
+        }
+    }
+    return 0;
+}
