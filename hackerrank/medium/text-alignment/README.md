@@ -1,4 +1,4 @@
-# String Validators
+# Text Alignment
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -59,16 +59,27 @@ Output the desired logo.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T11:11:26.108Z  
+**Submitted:** 2026-09-14T11:12:13.945Z  
 
 ```py
-if __name__ == '__main__':
-    s = input()
-    print(any(c.isalnum() for c in s))
-    print(any(c.isalpha() for c in s))
-    print(any(c.isdigit() for c in s))
-    print(any(c.islower() for c in s))
-    print(any(c.isupper() for c in s))
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+thickness = int(input())
+c = 'H'
+
+for i in range(thickness):
+    print((c*i).rjust(thickness-1)+c+(c*i).ljust(thickness-1))
+
+for i in range(thickness+1):
+    print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))
+
+for i in range((thickness+1)//2):
+    print((c*thickness*5).center(thickness*6))
+
+for i in range(thickness+1):
+    print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))
+
+for i in range(thickness):
+    print(((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).rjust(thickness*6))
 
 ```
 
