@@ -78,7 +78,7 @@ In the fifth line, print `True` if $S$ has any *uppercase characters*. Otherwise
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T11:11:11.539Z  
+**Submitted:** 2026-09-14T11:11:22.366Z  
 
 ```py
 if __name__ == '__main__':
