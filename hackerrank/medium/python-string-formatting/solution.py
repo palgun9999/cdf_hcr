@@ -1,10 +1,5 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-n, m = map(int, input().split())
-
-for i in range(1, n, 2):
-    print(('.|.' * i).center(m, '-'))
-
-print('WELCOME'.center(m, '-'))
-
-for i in range(n - 2, 0, -2):
-    print(('.|.' * i).center(m, '-'))
+def print_formatted(number):
+    # your code goes here
+    width = len(bin(number)[2:])
+    for i in range(1, number + 1):
+        print(f"{str(i):>{width}} {oct(i)[2:]:>{width}} {hex(i)[2:].upper():>{width}} {bin(i)[2:]:>{width}}")
