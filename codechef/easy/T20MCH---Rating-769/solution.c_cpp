@@ -4,10 +4,7 @@ int main()
 {
     int r,o,c;
     cin>>r>>o>>c;
-    int req=r-c;
-    int rem=20-o;
-    int can=rem*6*6;
-    if(can>req)
+    if((20-o)*6+c>=r)
     {
         cout<<"YES"<<endl;
     }
