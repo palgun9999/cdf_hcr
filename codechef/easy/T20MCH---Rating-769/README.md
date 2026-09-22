@@ -59,7 +59,7 @@ Similar to the previous explanation, the maximum total score that Team B can ach
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-22T12:27:52.838Z  
+**Submitted:** 2026-09-22T12:28:20.875Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
