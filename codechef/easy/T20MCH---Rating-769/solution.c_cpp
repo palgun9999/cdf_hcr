@@ -4,7 +4,7 @@ int main()
 {
     int r,o,c;
     cin>>r>>o>>c;
-    if((20-o)*6+c>r)
+    if((20-o)*6+c>=r)
     {
         cout<<"YES"<<endl;
     }
