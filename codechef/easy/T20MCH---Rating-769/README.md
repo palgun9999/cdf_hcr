@@ -59,7 +59,7 @@ Similar to the previous explanation, the maximum total score that Team B can ach
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-22T12:28:20.875Z  
+**Submitted:** 2026-09-22T12:34:42.278Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -68,7 +68,10 @@ int main()
 {
     int r,o,c;
     cin>>r>>o>>c;
-    if((20-o)*6+c>=r)
+    int req=r-c;
+    int rem=20-o;
+    int can=rem*6*6;
+    if(can>req)
     {
         cout<<"YES"<<endl;
     }
