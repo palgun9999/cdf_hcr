@@ -82,17 +82,45 @@ It can be verified that for any $X \gt 4$, no choice of subarray can make the ar
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T16:02:17.071Z  
+**Submitted:** 2026-09-23T16:09:31.092Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	// your code goes here
-
+int main() 
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n;
+        cin >> n;
+        vector<long long> sa(n);
+        for(int i=0;i<n;i++)
+        {
+            cin>>sa[i];
+        }
+        long long mx=sa[0];
+        long long ans=1e18;
+        for(int i=1;i<n;i++)
+        {
+            if(sa[i]<mx)
+            {
+                ans=min(ans,sa[i]);
+            }
+            mx=max(mx,sa[i]);
+        }
+        if(ans==1e18)
+        {
+            cout<<-1<<endl;
+        }
+        else
+        {
+            cout<<ans<<endl;
+        }
+    }
+    return 0;
 }
-
 ```
 
 ---
