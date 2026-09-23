@@ -77,28 +77,79 @@ Thus, it's impossible to make the array  *good*  after a single deletion.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T15:04:11.078Z  
+**Submitted:** 2026-09-23T15:28:23.190Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-int main() 
+int main()
 {
     int t;
-    cin>>t;
+    cin >> t;
     while(t--)
     {
         int n;
-        cin>>n;
+        cin >> n;
         vector<int> sa(n);
         for(int i=0;i<n;i++)
         {
             cin>>sa[i];
         }
-        
+        vector<int> pref(n);
+        pref[0]=sa[0];
+        for(int i=1;i<n;i++)
+        {
+            pref[i]=pref[i-1]+sa[i];
+        }
+        int pos = -1;
+        for(int i=0;i<n;i++)
+        {
+            if(pref[i]<0)
+            {
+                pos=i;
+                break;
+            }
+        }
+        if(pos==-1)
+        {
+            cout<<"YES"<<endl;
+            continue;
+        }
+        bool ok = false;
+        for(int del=0;del<=pos;del++)
+        {
+            int cur=0;
+            bool good=true;
+            for(int i=0;i<n;i++)
+            {
+                if(i==del)
+                {
+                    continue;
+                }
+                cur+=sa[i];
+                if(cur<0)
+                {
+                    good=false;
+                    break;
+                }
+            }
+            if(good)
+            {
+                ok=true;
+                break;
+            }
+        }
+        if(ok)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
     }
+    return 0;
 }
-
 ```
 
 ---
