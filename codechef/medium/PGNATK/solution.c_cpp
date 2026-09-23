@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,k;
+        cin>>n>>k;
+        int w=0;
+        int ti=0;
+        while(w<n)
+        {
+            ti++;
+            if(ti%k!=0)
+            {
+                w++;
+            }
+        }
+        cout<<ti<<endl;
+    }
+    return 0;
+}
