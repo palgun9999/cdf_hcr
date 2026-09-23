@@ -73,12 +73,12 @@ $5$ is the minimum cost needed to achieve this.
 
 ## Solution
 
-**Language:** c_cpp  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T14:59:06.614Z  
+**Submitted:** 2026-09-23T15:01:12.652Z  
 
-```c_cpp
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 int main() 
