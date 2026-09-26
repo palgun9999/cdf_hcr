@@ -51,12 +51,12 @@ After transmogrification, the characteristic values become {12,14,11,45,11}, out
 
 ## Solution
 
-**Language:** C++  
+**Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-26T01:18:34.485Z  
+**Submitted:** 2026-09-26T01:18:41.639Z  
 
-```cpp
+```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 int main() 
@@ -68,12 +68,18 @@ int main()
        int n,k;
        cin>>n>>k;
        vector<int> sa(n);
+       int c=0;
        for(int i=0;i<n;i++)
        {
            cin>>sa[i];
+           if((sa[i]+k)%7==0)
+           {
+               c++;
+           }
        }
-       
+       cout<<c<<endl;
    }
+   return 0;
 }
 
 ```
