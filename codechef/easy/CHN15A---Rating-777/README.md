@@ -54,7 +54,7 @@ After transmogrification, the characteristic values become {12,14,11,45,11}, out
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-27T12:46:34.952Z  
+**Submitted:** 2026-09-27T12:46:37.558Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
