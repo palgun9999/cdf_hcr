@@ -64,7 +64,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-01T06:06:14.221Z  
+**Submitted:** 2026-10-01T06:10:14.338Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -93,7 +93,7 @@ int main()
         }
         else
         {
-            cout<<n/2-c<<endl;
+            cout<<abs(n/2-c)<<endl;
         }
     }
     return 0;
