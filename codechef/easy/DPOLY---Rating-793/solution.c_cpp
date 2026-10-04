@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        vector<int> Tha(n);
+        int nu=0;
+        int ja=nu;
+        for(int i=0;i<n;i++)
+        {
+            cin>>Tha[i];
+            if(Tha[i]!=0)
+            {
+                ja=nu;
+            }
+            nu++;
+        }
+        cout<<ja<<endl;
+    }
+    return 0;
+}
