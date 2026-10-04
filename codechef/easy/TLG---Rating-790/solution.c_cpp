@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    
+    int cum1 = 0, cum2 = 0;
+    int max_lead = 0;
+    int winner = 0;
+    
+    while (n > 0) {
+        int s, t;
+        cin >> s >> t;
+        
+        cum1 += s;
+        cum2 += t;
+        
+        int current_lead = abs(cum1 - cum2);
+        int current_leader = (cum1 > cum2) ? 1 : 2;
+        
+        if (current_lead > max_lead) {
+            max_lead = current_lead;
+            winner = current_leader;
+        }
+        
+        n--;
+    }
+    
+    cout << winner << " " << max_lead << endl;
+    return 0;
+}
