@@ -71,17 +71,53 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T16:06:34.353Z  
+**Submitted:** 2026-10-07T16:08:28.320Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	// your code goes here
-
+int main() 
+{
+    int t;
+    cin >> t;
+    while (t--) 
+    {
+        long long n;
+        cin >> n;
+        vector<int> u(n - 1), v(n - 1), deg(n + 1, 0);
+        for (int i = 0; i < n - 1; i++)
+        {
+            cin >> u[i] >> v[i];
+            deg[u[i]]++;
+            deg[v[i]]++;
+        }
+        vector<long long> k(n + 1, 0);
+        long long e1 = 0, good1 = 0;
+        for (int i = 0; i < n - 1; i++) 
+        {
+            long long da = deg[u[i]], db = deg[v[i]];
+            long long c = n - da - db;
+            e1 += c;
+            if (da >= 2 && db >= 2) 
+            {
+                good1 += c;
+                k[u[i]]++;
+                k[v[i]]++;
+            }
+        }
+        long long p = 0, good2 = 0;
+        for (int b = 1; b <= n; b++) 
+        {
+            long long d = deg[b];
+            p += d * (d - 1) / 2;
+            if (d >= 3) good2 += k[b] * (k[b] - 1) / 2;
+        }
+        long long total = n * (n - 1) * (n - 2) / 6;
+        long long indep = total - e1 - p;
+        cout << indep + good1 + good2 << "\n";
+    }
+    return 0;
 }
-
 ```
 
 ---
