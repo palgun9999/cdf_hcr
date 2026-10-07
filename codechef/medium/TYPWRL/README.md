@@ -59,29 +59,31 @@ abcdefghijklmnopqrstuvwxyz
 
 ## Solution
 
-**Language:** c_cpp  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T14:33:55.635Z  
+**Submitted:** 2026-10-07T14:36:44.633Z  
 
-```c_cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() 
-{
-    int t;
-    cin>>t;
-    while(t--)
-    {
-        int n,m;
-        cin>>n>>m;
-        string s,l;
-        cin>>s;
-        cin>>l;
-        
-    }
-}
-
+```py
+# cook your dish here
+t = int(input())
+while t:
+    n, m = map(int, input().split())
+    s = input().strip()
+    l = set(input().strip())
+    best = 0
+    cur = 0
+    prev = None
+    for ch in s:
+        hand = ch in l
+        if hand == prev:
+            cur += 1
+        else:
+            cur = 1
+            prev = hand
+        best = max(best, cur)
+    print(best)
+    t-=1
 ```
 
 ---
