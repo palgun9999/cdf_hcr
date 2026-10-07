@@ -69,14 +69,29 @@ NO
 
 ## Solution
 
-**Language:** Python  
+**Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:26:09.474Z  
+**Submitted:** 2026-10-07T15:30:06.252Z  
 
-```py
-# cook your dish here
-
+```c_cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin >> t;
+    while (t--) 
+    {
+        int n;
+        string a, b;
+        cin >> n >> a >> b;
+        int ca = count(a.begin(), a.end(), '1');
+        int cb = count(b.begin(), b.end(), '1');
+        cout << ((ca % 2 == cb % 2) ? "YES" : "NO") <<endl;
+    }
+    return 0;
+}
 ```
 
 ---
