@@ -45,8 +45,8 @@ Explanation: Temperature at 122.11 Celsius converted in Kelvin is 395.26 and con
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.5 MB (beats 11.14%)  
-**Submitted:** 2026-10-05T17:18:13.129Z  
+**Memory:** 8.1 MB (beats 95.96%)  
+**Submitted:** 2026-10-16T07:16:30.061Z  
 
 ```cpp
 class Solution {
