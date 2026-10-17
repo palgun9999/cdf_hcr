@@ -34,15 +34,15 @@ Explanation: The odd numbers between 8 and 10 are [9].
 
 **Language:** C++  
 **Runtime:** 1 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-10-17T01:48:27.949Z  
+**Memory:** 7.4 MB  
+**Submitted:** 2026-10-17T01:49:03.506Z  
 
 ```cpp
 class Solution {
 public:
     int countOdds(int low, int high) 
     {
-        if(low%2==1 || low%2==1)
+        if(low%2==1 || high%2==1)
         {
             return ((high-low)/2)+1;
         }
