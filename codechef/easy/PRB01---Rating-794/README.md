@@ -51,28 +51,29 @@ yes
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-17T02:02:54.288Z  
+**Submitted:** 2026-10-17T14:52:45.243Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 bool isprime(int n)
 {
     if(n==1)
     {
-        return false;
+        return true;
     }
-    int c=2;
-    for(int i=2;i<n;i++)
+    bool fc=0;
+    for(int i=2;i*i<=n;i++)
     {
         if(n%i==0)
         {
-            c++;
+            fc=1;
+            break;
         }
     }
-    return c==2;
+    return fc;
 }
-int main() 
+int main()
 {
     int t;
     cin>>t;
@@ -80,7 +81,7 @@ int main()
     {
         int n;
         cin>>n;
-        if(isprime(n))
+        if(!isprime(n))
         {
             cout<<"yes"<<endl;
         }
@@ -91,7 +92,6 @@ int main()
     }
     return 0;
 }
-
 ```
 
 ---
