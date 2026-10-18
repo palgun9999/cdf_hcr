@@ -51,7 +51,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-18T03:21:07.698Z  
+**Submitted:** 2026-10-18T03:26:48.850Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -64,12 +64,7 @@ int main()
     {
         int x,y;
         cin>>x>>y;
-        int c=0;
-        while(c*x<y)
-        {
-            c++;
-        }
-        cout<<c-1<<endl;
+        cout<<(y-1)/x<<endl;
     }
     return 0;
 }
