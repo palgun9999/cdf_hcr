@@ -41,21 +41,21 @@ Explanation: Arrival time of the train was 13:00 hours. It is delayed by 11 hour
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-10-18T03:39:07.481Z  
+**Memory:** 7.9 MB  
+**Submitted:** 2026-10-18T03:43:23.127Z  
 
 ```cpp
 class Solution {
 public:
-    int findDelayedArrivalTime(int arrivalTime, int delayedTime) 
+    int findDelayedArrivalTime(int at, int dt) 
     {
-        if(abs(arrivalTime+delayedTime)<24)
+        if(at+dt<24)
         {
-            return arrivalTime+delayedTime;
+            return at+dt;
         }
         else
         {
-            return abs(arrivalTime+delayedTime)/24;
+            return abs(24-(at+dt));
         }
     }
 };
