@@ -33,9 +33,9 @@ Explanation: The odd numbers between 8 and 10 are [9].
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 79.19%)  
-**Memory:** 7.8 MB (beats 71.32%)  
-**Submitted:** 2026-10-17T01:49:08.241Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 7.8 MB (beats 39.81%)  
+**Submitted:** 2026-10-18T03:28:56.607Z  
 
 ```cpp
 class Solution {
