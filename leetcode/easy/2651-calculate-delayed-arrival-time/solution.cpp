@@ -1,14 +1,14 @@
 class Solution {
 public:
-    int findDelayedArrivalTime(int arrivalTime, int delayedTime) 
+    int findDelayedArrivalTime(int at, int dt) 
     {
-        if(abs(arrivalTime+delayedTime)<24)
+        if(at+dt<24)
         {
-            return arrivalTime+delayedTime;
+            return at+dt;
         }
         else
         {
-            return abs(arrivalTime+delayedTime)/24;
+            return abs(24-(at+dt));
         }
     }
 };
