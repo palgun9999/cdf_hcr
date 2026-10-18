@@ -40,9 +40,9 @@ Explanation: Arrival time of the train was 13:00 hours. It is delayed by 11 hour
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.9 MB  
-**Submitted:** 2026-10-18T03:43:23.127Z  
+**Runtime:** 1 ms (beats 4.56%)  
+**Memory:** 8.1 MB (beats 82.15%)  
+**Submitted:** 2026-10-18T03:43:27.867Z  
 
 ```cpp
 class Solution {
