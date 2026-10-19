@@ -1,0 +1,52 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool iscon(char s)
+{
+    return s != 'a' && s != 'e' && s != 'i' &&
+           s != 'o' && s != 'u';
+}
+
+int main()
+{
+    int t;
+    cin >> t;
+
+    while (t--)
+    {
+        int n;
+        cin >> n;
+
+        string s;
+        cin >> s;
+
+        int c = 0;
+        bool easy = true;
+
+        for (int i = 0; i < n; i++)
+        {
+            if (iscon(s[i]))
+            {
+                c++;
+
+                if (c >= 4)
+                {
+                    easy = false;
+                    break;
+                }
+            }
+            else
+            {
+                c = 0;
+            }
+        }
+
+        if (easy)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
+    }
+
+    return 0;
+}
