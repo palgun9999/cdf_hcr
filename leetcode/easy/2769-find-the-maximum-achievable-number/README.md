@@ -45,9 +45,9 @@ Apply the following operation twice to make the maximum achievable number equal 
 ## Solution
 
 **Language:** C++  
-**Runtime:** 3 ms (beats 7.00%)  
+**Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 9.7 MB (beats 5.72%)  
-**Submitted:** 2026-10-19T09:28:17.768Z  
+**Submitted:** 2026-10-19T10:12:31.937Z  
 
 ```cpp
 class Solution {
