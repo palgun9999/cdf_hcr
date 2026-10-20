@@ -53,7 +53,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-20T02:14:31.622Z  
+**Submitted:** 2026-10-20T02:15:03.032Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -65,16 +65,16 @@ int main()
     while(t--)
     {
         int n,k;
-        cin>>n>>k;  //5 10
-        vector<int> V(n); //3 5 3 2 1
-        vector<int> res; // 1 1 0 1
+        cin>>n>>k;  
+        vector<int> V(n);
+        vector<int> res; 
         for(int i=0;i<n;i++)
         {
             cin>>V[i];
-            if(V[i]<=k && k>0)  //0<=0
+            if(V[i]<=k && k>0)  
             {
-                k-=V[i]; //0
-                res.push_back(1); //
+                k-=V[i]; 
+                res.push_back(1); 
             }
             else
             {
