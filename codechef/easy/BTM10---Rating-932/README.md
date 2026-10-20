@@ -13,7 +13,7 @@ What can you say about the value of $C$ $=$ $A$ `^` $B$ with respect to $A$, $B$
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-20T10:26:21.657Z  
+**Submitted:** 2026-10-20T10:26:25.045Z  
 
 ```cpp
 #include <bits/stdc++.h>
