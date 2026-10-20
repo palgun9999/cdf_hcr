@@ -42,8 +42,8 @@ Output: 0
 
 **Language:** C++  
 **Runtime:** 1 ms (beats 8.15%)  
-**Memory:** 8.6 MB (beats 45.03%)  
-**Submitted:** 2026-10-20T01:59:37.752Z  
+**Memory:** 8.5 MB (beats 77.92%)  
+**Submitted:** 2026-10-20T02:00:00.192Z  
 
 ```cpp
 int solve(int n)
@@ -57,10 +57,10 @@ int solve(int n)
     }
     return sum;
 }
-int len(int n) //38
+int len(int n)
 {
     int c=0;
-    while(n>0) //38>0
+    while(n>0)
     {
         c++;
         n/=10;
@@ -71,10 +71,10 @@ class Solution {
 public:
     int addDigits(int num) 
     {   
-        int res=num; //38
+        int res=num;
         while(1)
         {
-            if(len(res)<=1) //38
+            if(len(res)<=1)
             {
                 break;
             }
