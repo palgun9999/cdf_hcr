@@ -9,10 +9,10 @@ int solve(int n)
     }
     return sum;
 }
-int len(int n) //38
+int len(int n)
 {
     int c=0;
-    while(n>0) //38>0
+    while(n>0)
     {
         c++;
         n/=10;
@@ -23,10 +23,10 @@ class Solution {
 public:
     int addDigits(int num) 
     {   
-        int res=num; //38
+        int res=num;
         while(1)
         {
-            if(len(res)<=1) //38
+            if(len(res)<=1)
             {
                 break;
             }
