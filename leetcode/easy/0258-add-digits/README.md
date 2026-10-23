@@ -41,9 +41,9 @@ Output: 0
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 8.15%)  
-**Memory:** 8.5 MB (beats 77.92%)  
-**Submitted:** 2026-10-20T02:00:00.192Z  
+**Runtime:** 1 ms (beats 9.29%)  
+**Memory:** 8.7 MB (beats 7.48%)  
+**Submitted:** 2026-10-23T03:00:09.600Z  
 
 ```cpp
 int solve(int n)
