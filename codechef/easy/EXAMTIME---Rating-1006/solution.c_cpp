@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int ddsa,dtoc,ddm;
+        cin>>ddsa>>dtoc>>ddm;
+        int sdsa,stoc,sdm;
+        cin>>sdsa>>stoc>>sdm;
+        int dt=ddsa+dtoc+ddm;
+        int st=sdsa+stoc+sdm;
+        if(dt>st)
+        {
+            cout<<"DRAGON"<<endl;
+        }
+        else if(dt<st)
+        {
+            cout<<"SLOTH"<<endl;
+        }
+        else if(dt==st && ddsa>sdsa)
+        {
+            cout<<"DRAGON"<<endl;
+        }
+        else if(dt==st && ddsa<sdsa)
+        {
+            cout<<"SLOTH"<<endl;
+        }
+        else if(dt==st && ddsa==sdsa && dtoc>stoc)
+        {
+            cout<<"DRAGON"<<endl;
+        }
+        else if(dt==st && ddsa==sdsa && dtoc<stoc)
+        {
+            cout<<"SLOTH"<<endl;
+        }
+        else if(dt==st && ddsa==sdsa && dtoc==stoc)
+        {
+            cout<<"TIE"<<endl;
+        }
+    }
+    return 0;
+}
