@@ -8,7 +8,7 @@ public:
             return nums[0]-1;
         }
         int start=nums[0];
-        int j=start;
+        int j=start-1;
         for(int i=0;i<nums.size();i++)
         {
             if(nums[i]!=j)
