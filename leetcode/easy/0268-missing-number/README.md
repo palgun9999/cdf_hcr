@@ -64,8 +64,8 @@ C++
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-11-17T01:41:48.285Z  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-11-17T01:42:41.802Z  
 
 ```cpp
 class Solution {
@@ -78,7 +78,7 @@ public:
             return nums[0]-1;
         }
         int start=nums[0];
-        int j=start;
+        int j=start-1;
         for(int i=0;i<nums.size();i++)
         {
             if(nums[i]!=j)
