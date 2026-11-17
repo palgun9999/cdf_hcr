@@ -53,9 +53,9 @@ The input binary string  **1111111111111111111111111111101**  has a total of thi
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.1 MB (beats 73.41%)  
-**Submitted:** 2026-11-17T02:05:57.892Z  
+**Runtime:** 0 ms  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-11-17T02:05:51.449Z  
 
 ```cpp
 class Solution {
