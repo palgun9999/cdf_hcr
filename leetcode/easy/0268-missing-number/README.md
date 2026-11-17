@@ -65,7 +65,7 @@ C++
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 8.1 MB  
-**Submitted:** 2026-11-17T01:41:06.658Z  
+**Submitted:** 2026-11-17T01:41:48.285Z  
 
 ```cpp
 class Solution {
@@ -73,7 +73,7 @@ public:
     int missingNumber(vector<int>& nums) 
     {
         sort(nums.begin(),nums.end());
-        if(nums.size()==1)
+        if(nums.size()==1 && nums[0]!=0)
         {
             return nums[0]-1;
         }
