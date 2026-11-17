@@ -3,7 +3,7 @@ public:
     int missingNumber(vector<int>& nums) 
     {
         sort(nums.begin(),nums.end());
-        if(nums.size()==1)
+        if(nums.size()==1 && nums[0]!=0)
         {
             return nums[0]-1;
         }
