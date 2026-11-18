@@ -67,18 +67,79 @@ NO
 
 ## Solution
 
-**Language:** C++  
+**Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:51:51.832Z  
+**Submitted:** 2026-11-18T14:53:45.683Z  
 
-```cpp
+```c_cpp
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	// your code goes here
+bool check(vector<int>& a, int x)
+{
+    int i = 0, j = a.size() - 1;
 
+    while(i < j)
+    {
+        if(a[i] == x)
+            i++;
+        else if(a[j] == x)
+            j--;
+        else if(a[i] == a[j])
+        {
+            i++;
+            j--;
+        }
+        else
+            return false;
+    }
+
+    return true;
+}
+
+int main()
+{
+    int t;
+    cin >> t;
+
+    while(t--)
+    {
+        int n;
+        cin >> n;
+
+        vector<int> a(n);
+
+        for(int i = 0; i < n; i++)
+            cin >> a[i];
+
+        int i = 0, j = n - 1;
+
+        while(i < j && a[i] == a[j])
+        {
+            i++;
+            j--;
+        }
+
+        if(i >= j)
+        {
+            cout << "NO\n";
+        }
+        else if(!check(a, a[i]))
+        {
+            cout << "YES " << a[i] << "\n";
+        }
+        else if(!check(a, a[j]))
+        {
+            cout << "YES " << a[j] << "\n";
+        }
+        else
+        {
+            cout << "NO\n";
+        }
+    }
+    return 0;
 }
 
 ```
