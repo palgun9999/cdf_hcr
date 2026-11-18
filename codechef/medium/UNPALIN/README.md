@@ -67,12 +67,12 @@ NO
 
 ## Solution
 
-**Language:** c_cpp  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:58:25.656Z  
+**Submitted:** 2026-11-18T14:59:29.945Z  
 
-```c_cpp
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 int main() 
