@@ -60,20 +60,54 @@ This leaves no finger free to tap the note at time $6$.
 
 ## Solution
 
-**Language:** C++  
+**Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:02:18.800Z  
+**Submitted:** 2026-11-18T15:02:47.652Z  
 
-```cpp
+```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	// your code goes here
+const long long MOD = 998244353;
 
+void solve()
+{
+    int n;
+    long long g;
+    cin >> n >> g;
+
+    vector<long long> a(n);
+
+    for(int i = 0; i < n; i++)
+        cin >> a[i];
+
+    vector<long long> dp(n, 0);
+
+    dp[0] = 2;
+
+    for(int i = 1; i < n; i++)
+    {
+        if(a[i] - a[i - 1] < g)
+            dp[i] = dp[i - 1];
+        else
+            dp[i] = (2 * dp[i - 1]) % MOD;
+    }
 }
 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    cin >> t;
+
+    while(t--)
+        solve();
+
+    return 0;
+}
 ```
 
 ---
