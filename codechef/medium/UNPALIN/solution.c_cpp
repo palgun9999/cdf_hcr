@@ -1,7 +1,68 @@
+
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	// your code goes here
-
+bool check(vector<int>& a, int x)
+{
+    int i = 0;
+    int j = a.size() - 1;
+    while(i < j)
+    {
+        if(a[i] == x)
+        {
+            i++;
+        }
+        else if(a[j] == x)
+        {
+            j--;
+        }
+        else
+        {
+            if(a[i] != a[j])
+            {
+                return false;
+            }
+            i++;
+            j--;
+        }
+    }
+    return true;
+}
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for(int i = 0; i < n; i++)
+        {
+            cin >> a[i];
+        }
+        int i = 0;
+        int j = n - 1;
+        while(i < j && a[i] == a[j])
+        {
+            i++;
+            j--;
+        }
+        if(i >= j)
+        {
+            cout << "NO" << endl;
+        }
+        else if(check(a, a[i]))
+        {
+            cout << "YES " << a[i] << endl;
+        }
+        else if(check(a, a[j]))
+        {
+            cout << "YES " << a[j] << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
+    }
+    return 0;
 }
