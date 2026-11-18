@@ -57,9 +57,9 @@ Hence, the answer is nums[3] = 1.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 25.8 MB (beats 63.93%)  
-**Submitted:** 2026-11-18T03:23:21.221Z  
+**Runtime:** 0 ms  
+**Memory:** 8 MB  
+**Submitted:** 2026-11-18T03:23:27.076Z  
 
 ```cpp
 int nbits(int n)
