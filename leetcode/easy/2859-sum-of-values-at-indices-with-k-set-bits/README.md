@@ -57,20 +57,33 @@ Hence, the answer is nums[3] = 1.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-11-18T03:10:38.915Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 25.7 MB (beats 63.93%)  
+**Submitted:** 2026-11-18T03:23:02.247Z  
 
 ```cpp
+int nbits(int n)
+{
+    int cnt=0;
+    while(n>0)
+    {
+        if((n&1)==1)
+        {
+            cnt++;
+        }
+        n>>=1;
+    }
+    return cnt;
+}
 class Solution {
 public:
     int sumIndicesWithKSetBits(vector<int>& nums, int k) 
     {
         int res=0;
-        int bit=(1<<k);
+        int bit=(1<<k); //
         for(int i=0;i<nums.size();i++)
         {
-            if((i&bit)==1)
+            if(nbits(i)==k)
             {
                 res+=nums[i];
             }
