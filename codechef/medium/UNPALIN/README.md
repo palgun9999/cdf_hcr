@@ -70,7 +70,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:52:38.711Z  
+**Submitted:** 2026-11-18T14:56:44.653Z  
 
 ```c_cpp
 
@@ -78,27 +78,21 @@ NO
 using namespace std;
 bool check(vector<int>& a, int x)
 {
-    int i = 0;
-    int j = a.size() - 1;
+    int i = 0, j = a.size() - 1;
+
     while(i < j)
     {
         if(a[i] == x)
+            i++;
+        else if(a[j] == x)
+            j--;
+        else if(a[i] == a[j])
         {
             i++;
-        }
-        else if(a[j] == x)
-        {
             j--;
         }
         else
-        {
-            if(a[i] != a[j])
-            {
-                return false;
-            }
-            i++;
-            j--;
-        }
+            return false;
     }
     return true;
 }
@@ -106,17 +100,19 @@ int main()
 {
     int t;
     cin >> t;
+
     while(t--)
     {
         int n;
         cin >> n;
+
         vector<int> a(n);
+
         for(int i = 0; i < n; i++)
-        {
             cin >> a[i];
-        }
-        int i = 0;
-        int j = n - 1;
+
+        int i = 0, j = n - 1;
+
         while(i < j && a[i] == a[j])
         {
             i++;
@@ -124,19 +120,19 @@ int main()
         }
         if(i >= j)
         {
-            cout << "NO" << endl;
+            cout << "NO\n";
         }
-        else if(check(a, a[i]))
+        else if(!check(a, a[i]))
         {
-            cout << "YES " << a[i] << endl;
+            cout << "YES " << a[i] << "\n";
         }
-        else if(check(a, a[j]))
+        else if(!check(a, a[j]))
         {
-            cout << "YES " << a[j] << endl;
+            cout << "YES " << a[j] << "\n";
         }
         else
         {
-            cout << "NO" << endl;
+            cout << "NO\n";
         }
     }
     return 0;
