@@ -14,7 +14,7 @@ int main()
             cin>>V[i];
         }
         sort(V.begin(),V.end());
-        int sum+=V[0]/2;
+        int sum=V[0]/2;
         sum+=V[1]/2;
         for(int i=2;i<n;i++)
         {
