@@ -58,8 +58,8 @@ Hence, the answer is nums[3] = 1.
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 25.7 MB (beats 63.93%)  
-**Submitted:** 2026-11-18T03:23:02.247Z  
+**Memory:** 25.8 MB (beats 63.93%)  
+**Submitted:** 2026-11-18T03:23:21.221Z  
 
 ```cpp
 int nbits(int n)
