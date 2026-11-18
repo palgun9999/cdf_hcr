@@ -63,7 +63,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:39:28.937Z  
+**Submitted:** 2026-11-18T14:44:05.318Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -81,8 +81,16 @@ int main()
         {
             cin>>V[i];
         }
-        
+        sort(V.begin(),V.end());
+        int sum+=V[0]/2;
+        sum+=V[1]/2;
+        for(int i=2;i<n;i++)
+        {
+            sum+=V[i];
+        }
+        cout<<sum<<endl;
     }
+    return 0;
 }
 
 ```
