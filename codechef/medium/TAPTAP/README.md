@@ -60,12 +60,12 @@ This leaves no finger free to tap the note at time $6$.
 
 ## Solution
 
-**Language:** c_cpp  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:01:00.654Z  
+**Submitted:** 2026-11-18T15:02:18.800Z  
 
-```c_cpp
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
