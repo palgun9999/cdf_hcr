@@ -1,67 +1,33 @@
-
 #include <bits/stdc++.h>
 using namespace std;
-bool check(vector<int>& a, int x)
+int main() 
 {
-    int i = 0;
-    int j = a.size() - 1;
-    while(i < j)
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int T;
+    cin >> T;
+    while (T--) 
     {
-        if(a[i] == x)
+        int N;
+        cin >> N;
+        vector<int> A(N);
+        for (int i = 0; i < N; i++)
+            cin >> A[i];
+        bool palindrome = true;
+        for (int i = 0, j = N - 1; i < j; i++, j--)
         {
-            i++;
-        }
-        else if(a[j] == x)
-        {
-            j--;
-        }
-        else
-        {
-            if(a[i] != a[j])
+            if (A[i] != A[j]) 
             {
-                return false;
+                palindrome = false;
+                break;
             }
-            i++;
-            j--;
         }
-    }
-    return true;
-}
-int main()
-{
-    int t;
-    cin >> t;
-    while(t--)
-    {
-        int n;
-        cin >> n;
-        vector<int> a(n);
-        for(int i = 0; i < n; i++)
+        if (palindrome)
         {
-            cin >> a[i];
-        }
-        int i = 0;
-        int j = n - 1;
-        while(i < j && a[i] == a[j])
+            cout << "NO\n";
+        } else 
         {
-            i++;
-            j--;
-        }
-        if(i >= j)
-        {
-            cout << "NO" << endl;
-        }
-        else if(check(a, a[i]))
-        {
-            cout << "YES " << a[i] << endl;
-        }
-        else if(check(a, a[j]))
-        {
-            cout << "YES " << a[j] << endl;
-        }
-        else
-        {
-            cout << "NO" << endl;
+            cout << "YES " << (N + 1) << "\n";
         }
     }
     return 0;
