@@ -63,45 +63,33 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:48:12.645Z  
+**Submitted:** 2026-11-18T14:47:22.032Z  
 
 ```c_cpp
-
 #include <bits/stdc++.h>
 using namespace std;
-
-int main()
+int main() 
 {
     int t;
-    cin >> t;
-
+    cin>>t;
     while(t--)
     {
         int n;
-        cin >> n;
-
+        cin>>n;
         vector<int> V(n);
-
-        int sum = 0;
-
-        for(int i = 0; i < n; i++)
+        for(int i=0;i<n;i++)
         {
-            cin >> V[i];
-            sum += V[i];
+            cin>>V[i];
         }
-
-        int mini = INT_MAX;
-
-        for(int i = 0; i < n-1; i++)
+        sort(V.begin(),V.end());
+        int sum=V[0]/2;
+        sum+=V[1]/2;
+        for(int i=2;i<n;i++)
         {
-            mini = min(mini, V[i] + V[i+1]);
+            sum+=V[i];
         }
-
-        sum -= mini/2;
-
-        cout << sum << endl;
+        cout<<sum<<endl;
     }
-
     return 0;
 }
 
