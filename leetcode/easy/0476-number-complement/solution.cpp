@@ -13,7 +13,7 @@ public:
             else
             {
                 res<<=1;
-                res|=1;
+                res|=i;
             }
             i<<=1;
         }
