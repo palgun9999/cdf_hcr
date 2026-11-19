@@ -47,20 +47,27 @@ Explanation: The binary representation of 1 is 1 (no leading zero bits), and its
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 7.9 MB  
-**Submitted:** 2026-11-19T16:57:11.390Z  
+**Submitted:** 2026-11-19T17:00:22.133Z  
 
 ```cpp
 class Solution {
 public:
     int findComplement(int num) 
     {
-        int res=0;
-        int i=1;
-        while(i<num)
+        int res=0; //000
+        int i=1;    //001
+        while(i<num) //1<5
         {
-            if((num&i)==1)
+            if((num&i)==1)  //101 
             {
-                res<<=1;
+                if(res==0)
+                {
+                    res=1;
+                }
+                else
+                {
+                    res<<=1;
+                } 
             }
             else
             {
