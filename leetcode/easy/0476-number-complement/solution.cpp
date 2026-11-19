@@ -6,7 +6,7 @@ public:
         int i=1;
         while(i<num)
         {
-            if((num&1)==1)
+            if((num&i)==1)
             {
                 res<<=1;
             }
