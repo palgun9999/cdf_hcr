@@ -46,8 +46,8 @@ Explanation: The binary representation of 1 is 1 (no leading zero bits), and its
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8 MB  
-**Submitted:** 2026-11-19T16:56:03.937Z  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-11-19T16:56:43.816Z  
 
 ```cpp
 class Solution {
@@ -58,7 +58,7 @@ public:
         int i=1;
         while(i<num)
         {
-            if((num&1)==1)
+            if((num&i)==1)
             {
                 res<<=1;
             }
