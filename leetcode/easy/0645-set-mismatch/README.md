@@ -40,33 +40,66 @@ Output: [1,2]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-11-20T17:10:58.773Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 25.1 MB (beats 73.29%)  
+**Submitted:** 2026-11-20T17:19:02.068Z  
 
 ```cpp
+
 class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) 
     {
-        int cur=nums[0];
-        vector<int> res;
-        for(int i=1;i<nums.size();i++)
+        int n = nums.size();
+        int xorAll = 0;
+        int xorArray = 0;
+        for (int i=1;i<=n;i++) 
         {
-            if(cur==nums[i])
+            xorAll^=i;
+        }
+        for (int num : nums) 
+        {
+            xorArray ^= num;
+        }
+        int xorResult = xorArray ^ xorAll;
+        int rightmostSetBit = xorResult & -xorResult;
+        int xorSet = 0;
+        int xorNotSet = 0;
+        for (int i = 1; i <= n; i++) 
+        {
+            if (i & rightmostSetBit) 
             {
-                res.push_back(cur);
-                res.push_back(cur+1);
-                break; 
-            }
+                xorSet ^= i;
+            } 
             else
             {
-                cur=nums[i];
+                xorNotSet ^= i;
             }
         }
-        return res;
+        for (int num : nums)
+        {
+            if(num & rightmostSetBit)
+            {
+                xorSet ^= num;
+            }
+            else 
+            {
+                xorNotSet ^= num;
+            }
+        }
+        for (int num : nums) 
+        {
+            if (num == xorSet) 
+            {
+                return {xorSet, xorNotSet};
+            }
+        }
+        return {xorNotSet, xorSet};
     }
 };
+
+
+
 ```
 
 ---
