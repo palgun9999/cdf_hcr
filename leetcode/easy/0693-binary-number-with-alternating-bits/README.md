@@ -45,40 +45,16 @@ Explanation: The binary representation of 11 is: 1011.
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-11-23T15:39:29.377Z  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-11-23T15:47:57.507Z  
 
 ```cpp
-bool check(int n)
-{
-    bool res=true;
-    n=~n;
-    while(n>0)
-    {
-        if((n&1)==1 && ((n>>1)&1)==1)
-        {
-            res=false;
-        }
-        n>>=1;
-    }
-    return res;
-}
-class Solution
-{
+class Solution {
 public:
     bool hasAlternatingBits(int n) 
     {
-        bool res=true;
-        bool rest=check(n);
-        while(n>0)
-        {
-            if((n&1)==1 && ((n>>1)&1)==1)
-            {
-                res=false;
-            }
-            n>>=1;
-        }
-        return res && rest;
+        int x=n^(n>>1);
+        return (x&(x+1))==0;
     }
 };
 ```
