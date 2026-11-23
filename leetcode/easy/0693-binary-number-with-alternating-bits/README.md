@@ -44,9 +44,9 @@ Explanation: The binary representation of 11 is: 1011.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.9 MB  
-**Submitted:** 2026-11-23T15:55:03.488Z  
+**Runtime:** 1 ms (beats 5.06%)  
+**Memory:** 7.8 MB (beats 62.69%)  
+**Submitted:** 2026-11-23T15:55:07.201Z  
 
 ```cpp
 class Solution {
