@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,k;
+        cin>>n>>k;
+        vector<int> V(n);
+        for(int i=0;i<n;i++)
+        {
+            cin>>V[i];
+        }
+        int protine=0;
+        bool flag=true;
+        int curr=0;
+        for(int i=0;i<n;i++)
+        {
+            protine+=V[i];
+            if(protine<k)
+            {
+                curr=i+1;
+                flag=false;
+                break;
+            }
+            protine-=k;
+        }
+        if(flag)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO "<<curr<<endl;
+        }
+    }
+    return 0;
+}
