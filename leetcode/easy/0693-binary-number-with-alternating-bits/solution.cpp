@@ -1,8 +1,8 @@
 class Solution {
 public:
-    bool hasAlternatingBits(int n) 
+    bool hasAlternatingBits(int n)
     {
-        int x=n^(n>>1);
-        return (x&(x+1))==0;
+        long long x = n ^ (n >> 1);
+        return (x & (x + 1)) == 0;
     }
 };
