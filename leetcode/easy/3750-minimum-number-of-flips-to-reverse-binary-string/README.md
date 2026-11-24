@@ -47,51 +47,32 @@ The binary representation of 10 is `"1010"`. Its reverse is `"0101"`. All four b
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-11-24T01:37:15.963Z  
+**Runtime:** 1 ms (beats 55.64%)  
+**Memory:** 9 MB (beats 53.76%)  
+**Submitted:** 2026-11-24T01:44:54.957Z  
 
 ```cpp
-string int_to_str(int n)
-{
-    string res;
-    while(n>0)
-    {
-        if((n|1)==1)
-        {
-            res.push_back('1');
-        }
-        else
-        {
-            res.push_back('0');
-        }
-        n>>=1;
-    }
-    return res;
-}
-int str_to_int(string res)
-{
-    int ans=0;
-    for(int i=0;i<res.size();i++)
-    {
-        ans<<=1;
-        if(res[i]=='1')
-        {
-            ans|=1;
-        }
-        else
-        {
-            ans|=0;
-        }
-    }
-    return ans;
-}
 class Solution {
 public:
     int minimumFlips(int n) 
     {
-        string res=int_to_str(n);
-        int ans=str_to_int(res);
+        string s = "";
+        while (n > 0) 
+        {
+            s.push_back((n & 1) + '0');
+            n >>= 1;
+        }
+        int ans = 0;
+        int i = 0, j = s.size() - 1;
+        while (i < j) 
+        {
+            if (s[i] != s[j])
+            {
+                ans += 2;
+            }
+            i++;
+            j--;
+        }
         return ans;
     }
 };
