@@ -48,8 +48,8 @@ The binary representation of 10 is `"1010"`. Its reverse is `"0101"`. All four b
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8 MB  
-**Submitted:** 2026-11-24T01:14:39.090Z  
+**Memory:** 7.7 MB  
+**Submitted:** 2026-11-24T01:20:04.918Z  
 
 ```cpp
 class Solution {
@@ -57,11 +57,10 @@ public:
     int minimumFlips(int n) 
     {
         int res=0;
-        while(n>0)
+        while(res<n)
         {
             res<<=1;
             res|=(n|1);
-            n>>=1;
         }
         return res;
     }
