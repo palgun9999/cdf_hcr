@@ -48,8 +48,8 @@ The binary representation of 10 is `"1010"`. Its reverse is `"0101"`. All four b
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8 MB  
-**Submitted:** 2026-11-24T01:36:53.068Z  
+**Memory:** 7.7 MB  
+**Submitted:** 2026-11-24T01:37:15.963Z  
 
 ```cpp
 string int_to_str(int n)
