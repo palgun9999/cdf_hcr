@@ -63,12 +63,12 @@ Output
 
 ## Solution
 
-**Language:** c_cpp  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-25T14:51:23.052Z  
+**Submitted:** 2026-11-25T14:52:21.969Z  
 
-```c_cpp
+```cpp
 
 #include <bits/stdc++.h>
 using namespace std;
